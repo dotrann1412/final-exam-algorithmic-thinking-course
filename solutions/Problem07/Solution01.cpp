@@ -73,7 +73,6 @@ void solve() {
 	stack<int> st;
 	
 	int res = 0;
-	cerr << "DEBUG " << 0 << '\n';
 	for (int i = 0; i < n; ++i) {
 		if (st.empty()) st.push(i);
 		else {
@@ -82,7 +81,7 @@ void solve() {
 
 			if (!st.empty()) {
 				for (int j = st.top() + 1; j < i; ++j) {
-					res += a[i] - a[j];
+					res += a[i] - a[j], a[j] = a[i];
 				}
 			}
 			
@@ -100,16 +99,13 @@ void solve() {
 
 			if (!st.empty()) {
 				for (int j = st.top() - 1; j > i; --j) {
-					res += a[i] - a[j];
+					res += a[i] - a[j], a[j] = a[i];
 				}
 			}
 			
 			st.push(i);
 		}
 	}
-
-	cerr << "DEBUG " << 3 << '\n';
-
 
 	cout << res << '\n';
 }
