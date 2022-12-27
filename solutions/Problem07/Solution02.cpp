@@ -81,7 +81,6 @@ void solve() {
 	int res = 0;
 	for (int i = 1; i < n - 1; ++i) {
 		res += min(maxSuff[i], maxPref[i]) - a[i];
-		cerr << min(maxSuff[i], maxPref[i]) - a[i] << '\n';
 	}
 
 	cout << res << '\n';
