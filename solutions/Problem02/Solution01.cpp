@@ -41,7 +41,7 @@ void solve() {
 		const int K = i << 1;
 		for (auto x: primes) {
 			if (x > i) break;
-			res += (x + *lower_bound(all(primes), K - x) == K);
+			res += (x + *lower_bound(all(primes), K - x)) == K;
 		}
 	}
 
