@@ -38,8 +38,6 @@ void solve() {
 	int n = s.size(), m = t.size();
 	dp[n][m] = true;
 
-	cerr << "[DEBUG]\t" << s << '\t' << t << '\n';
-
 	auto eq = [&] (char a, char b) {
 		return a == b || b == '.';
 	};
@@ -51,8 +49,7 @@ void solve() {
 			
 			if (1 + j < m && t[j + 1] == '*')
 				dp[i][j] = dp[i][j + 2] || match && dp[i + 1][j];
-			else
-				dp[i][j] = match && dp[i + 1][j + 1];
+			else dp[i][j] = match && dp[i + 1][j + 1];
 		}
 	}
 	
