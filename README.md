@@ -1,7 +1,10 @@
 # Final exam algorithmic thinking course
 This is our's solution for The Final exam of HCMUS - Algorithmic Thinking Course (CNTN 2020)
-
+<!-- 
 ## Note
+### Problem 1
+- Build up a segment tree for quick calculating gcd of value in range `[i, j]` (0 <= i <= j < n).
+- Interate over the list from 0 to [n - k - 1] and each step 
 ### Problem 2
 - `2xn` is an even number, so `p` and `q` are odd primes (not include 2).  
 - The problem becomes `p+q <= 2xn`.
@@ -20,4 +23,4 @@ This is our's solution for The Final exam of HCMUS - Algorithmic Thinking Course
   
 ### Problem 6
 - Using min-heap instead, each node of min-heap stores {val, index}.
-- Perform in `O(N * K * log K)`
+- Perform in `O(N * K * log K)` -->
